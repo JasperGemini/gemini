@@ -1,0 +1,50 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.nomura.wmd"
+    },
+    "jhipsterVersion": "4.1.1",
+    "baseName": "flute",
+    "packageName": "com.nomura.wmd",
+    "packageFolder": "com/nomura/wmd",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": false,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mariadb",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "jwtSecretKey": "5c40dfb656231fd503259d0e8f93d5f635d872c5",
+    "enableTranslation": true,
+    "languages": [
+      "en",
+      "zh-cn"
+    ]
+  },
+  "generator-jhipster-react": {
+    "promptValues": {
+      "nativeLanguage": "en"
+    },
+    "clientFramework": "react",
+    "useSass": true,
+    "clientPackageManager": "yarn",
+    "jhipsterVersion": "0.0.0",
+    "applicationType": "monolith",
+    "baseName": "flute",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "zh-cn"
+    ]
+  }
+}

@@ -1,0 +1,1869 @@
+-------index.html-----------------
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HTML5</title>
+<script type="text/javascript" src="./scripts/jquery-1.7.2.js"></script>
+<style type="text/css">
+body{
+	margin: 0px auto;
+	background-color: gray;
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+#myCanvas{
+	width:100%;
+	height:90%;
+	-webkit-animation-name: fadeIn; /*动画名称*/
+	-webkit-animation-duration: 1s; /*动画持续时间*/
+	-webkit-animation-iteration-count: 1; /*动画次数*/
+	-webkit-animation-delay: 0s; /*延迟时间*/
+}
+@-webkit-keyframes fadeIn {
+	0% {
+	opacity: 0; /*初始状态 透明度为0*/
+	}
+	50% {
+	opacity: 0; /*中间状态 透明度为0*/
+	}
+	100% {
+	opacity: 1; /*结尾状态 透明度为1*/
+	}
+}
+.font_div {
+	width:100%;
+	top:40%;
+	position:absolute; 
+	vertical-align:middle;
+	text-align:center;
+}
+
+.div1, .div2, .div3, .image_div{
+	display:none;
+}
+
+.div1 {
+	font:70px bold fangsong;
+	color:red;
+	background: -webkit-linear-gradient(top, black, red); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(black, red); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(black, red); /* Firefox 3.6 - 15 */
+    background: linear-gradient(black, red); /* 标准的语法（必须放在最后） */
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.div2 {
+	font:25px bold "微软雅黑";
+	color:gray;
+	text-align:center;
+	width:100%;
+}
+
+.div3 {
+	width:100%;
+	height: 190px;
+	margin-top: 20%;
+	background: -webkit-gradient(linear,top,from(gray),to(black));
+    background: -o-linear-gradient(gray, black); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(gray, black); /* Firefox 3.6 - 15 */
+    background: linear-gradient(gray, black); /* 标准的语法（必须放在最后） */
+    opacity:0.9;
+}
+
+.image_div {
+	margin:0px auto;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:-1;
+	text-align:center;
+	top:-25%;/* 移到-40 left移到40 */
+}
+.bigImages {
+	width:90%;
+	height: 125%;
+}
+
+.hr_left_div2{ width:40%; height:0px; border:#999 1px solid; float:left;}
+.hr_right_div2{ width:40%; height:0px; border:#999 1px solid; float:right;}
+.hr_center_div2{ float:left; height:5px; line-height:5px; /* margin:0px 10px; */;width:15%;}
+
+.hr_top_div3{ 
+	width:100%;
+	height:2px; 
+	background: -webkit-linear-gradient(left, white , red); /* Safari 5.1 - 6.0 */
+  	background: -o-linear-gradient(right, white, red); /* Opera 11.1 - 12.0 */
+  	background: -moz-linear-gradient(right, white, red); /* Firefox 3.6 - 15 */
+  	background: linear-gradient(to right, white , red); /* 标准的语法 */
+}
+.hr_middle_div3 {
+	font: 27px bold "微软雅黑";
+	color: white;
+	height: 88%;
+}
+.hr_bottom_div3 {
+	width:100%; 
+	height:2px; 
+	background: -webkit-linear-gradient(left, red , white); /* Safari 5.1 - 6.0 */
+  	background: -o-linear-gradient(right, red, white); /* Opera 11.1 - 12.0 */
+  	background: -moz-linear-gradient(right, red, white); /* Firefox 3.6 - 15 */
+  	background: linear-gradient(to right, red , white); /* 标准的语法 */
+}
+
+
+@media screen and (max-width:980px)
+ {
+	 .div2{
+	 font-size:20px;
+	 }
+	 .div1{
+	 font-size:40px;
+	 }
+	.hr_middle_div3{
+	 font-size:20px;
+	}
+	.div3{
+	 height:170px;
+	 margin-top: 24%;
+	}
+ }
+ @media screen and (max-width:580px)
+ {
+	 .div2{
+	 font-size:14px;
+	 }
+	  .div1{
+	 font-size:30px;
+	 }
+	.hr_middle_div3{
+	 font-size:14px;
+	}
+	.div3{
+	 height:160px;
+	 margin-top: 28%;
+	}
+ }
+ @media screen and (max-width:380px)
+ {
+	 .div2{
+	 font-size:8px;
+	 }
+	  .div1{
+	 font-size:20px;
+	 }
+	.hr_middle_div3{
+	 font-size:8px;
+	}
+	.div3{
+	 height:150px;
+	 margin-top: 32%;
+	}
+ }
+</style>
+</head>
+<body>
+	<div class="font_div">
+		<div class="div1">
+			<span>快速鏈結</span>
+		</div>
+		<div class="div2">
+			<div class="hr_left_div2"></div>
+			<div class="hr_center_div2">重點3☝</div>
+			<div class="hr_right_div2"></div>
+		</div>
+		<div class="div3">
+			<div style="height:5%;"></div>
+			<div class="hr_top_div3"></div>
+			<div class="hr_middle_div3">
+				<div style="height:30%;"></div>
+				<span>我们的在线资源分为快速链接及市场透视，您可以方便而且快捷地查询，节省您宝贵的时间。</span>
+			</div>
+			<div class="hr_bottom_div3"></div>
+		</div>
+	</div>
+	<div class="image_div">
+		<img class="bigImages" src="./images/screen_home.png">
+	</div>
+	
+	<canvas id="myCanvas"></canvas>
+</body>
+<script type="text/javascript">
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+var bodyWidth = document.body.clientWidth;
+var bodyHeight = document.body.clientHeight;
+
+
+$(function(){
+	init();
+});
+
+function init () {
+	
+	canvasLoad();
+	
+	//上面标题文字出现
+	$(".div1").show(2000);
+	
+	//下方次要文字出现
+	setTimeout(function () {
+		$(".div2").show(1000);
+	}, 2000);
+	
+// 	//下方次要文字消失
+// 	setTimeout(function () {
+// 		$(".div2").hide(1000);
+// 	}, 4000);
+	
+// 	//上面标题文字消失
+// 	setTimeout(function () {
+// 		$(".div1").hide(1000);
+// 	}, 5000);
+	
+// 	//图片出现
+// 	setTimeout(function () {
+// 		$(".image_div").show(2000);
+		
+// 	}, 6000);
+	
+// 	//加深颜色
+// 	setTimeout(function () {
+// 		$(".div3").show(1000);
+// 		//矩形渐变
+// 		var my_gradient=ctx.createLinearGradient(0,0,0,170);
+// 		my_gradient.addColorStop(0,"black");
+// 		my_gradient.addColorStop(0.4,"#FFFFFF");
+// 		my_gradient.addColorStop(0.6,"#FFFFFF");
+// 		my_gradient.addColorStop(1,"black");
+		
+// 		ctx.fillStyle=my_gradient;
+// 		ctx.globalAlpha=0.1;//透明度
+// 		ctx.fillRect(0, bodyHeight * 0.02, bodyWidth, bodyHeight * 0.9);
+		
+// 	}, 8000);
+	
+// 	//移动图片
+// 	setTimeout(function () {
+// 		var topNum = -24;
+// 		var leftNum = 0;
+// 		var imgScale = 1.0;//图片放大倍数
+// 		//移动大图片
+// 		var timer = setInterval(function () {
+// 			topNum += -2;
+// 			leftNum += 2;
+// 			imgScale += 0.05;
+			
+// 			if(topNum >= -50){
+// 				$(".image_div").css("top", topNum + "%");
+// 			}
+// 			if(leftNum <= 50){
+// 				$(".image_div").css("left", leftNum + "%")
+// 			}else{
+// 				this.clearInterval(timer);
+// 				var my_gradient=ctx.createLinearGradient(0,0,0,170);
+// 				my_gradient.addColorStop(0,"black");
+// 				my_gradient.addColorStop(0.5,"#FFFFFF");
+// 				my_gradient.addColorStop(1,"black");
+				
+// 				ctx.fillStyle=my_gradient;
+// 				ctx.globalAlpha=0.5;//透明度
+// 				ctx.fillRect(0, bodyHeight * 0.02, bodyWidth, bodyHeight * 0.9);
+				
+// 				//清除大面积
+// 				setTimeout(function () {
+// 					ctx.clearRect(118,43,53,57);
+// 				}, 1000);
+				
+// 				//清除上方小面积
+// 				setTimeout(function () {
+// 			 		ctx.clearRect(0, bodyHeight * 0.02, bodyWidth, bodyHeight * 0.9);
+					
+// 					ctx.fillStyle="gray";
+// 					ctx.fillRect(0, bodyHeight * 0.02, bodyWidth, bodyHeight * 0.9);
+// 					ctx.globalAlpha=0.7;//透明度
+					
+// 					ctx.clearRect(118,43,53,30);
+// 				}, 2000);
+				
+// 			 	//清除下方小面积
+// 			 	setTimeout(function () {
+// 			 		ctx.clearRect(0, bodyHeight * 0.02, bodyWidth, bodyHeight * 0.9);
+					
+// 			 		ctx.fillStyle="gray";
+// 			 		ctx.fillRect(0, bodyHeight * 0.02, bodyWidth, bodyHeight * 0.9);
+// 			 		ctx.globalAlpha=0.7;//透明度
+					
+// 			 		ctx.clearRect(118,73,53,28);
+// 			 	}, 4000);
+				
+// 			 	//div消失
+// 			 	setTimeout(function () {
+// 			 		$("div").hide(2000);
+// 			 	}, 6000);
+				
+// 			}
+// 			if(imgScale <= 1.4){
+// 				$(".bigImages").attr("style","-webkit-transform:scale(" + imgScale + "," + imgScale + ");-moz-transform:scale(1.3,1.3);-transform:scale(1.3,1.3);");
+// 			}
+// 		}, 100);
+		
+// 	}, 9000);
+	
+	
+}
+
+//加载canvas
+function canvasLoad () {
+	
+	//矩形渐变
+	var my_gradient=ctx.createLinearGradient(0,0,0,170);
+	my_gradient.addColorStop(0,"#888888");
+	my_gradient.addColorStop(0.2,"#FFFFFF");
+	my_gradient.addColorStop(0.4,"#FFFFFF");
+	my_gradient.addColorStop(0.6,"#FFFFFF");
+	my_gradient.addColorStop(0.8,"#FFFFFF");
+	my_gradient.addColorStop(1,"#888888");
+	
+// 	ctx.shadowBlur=50;//阴影模糊级别
+	ctx.fillStyle = my_gradient;
+	ctx.globalAlpha=0.9;//透明度
+	ctx.fillRect(0, bodyHeight * 0.02, bodyWidth, bodyHeight * 0.9);
+	ctx.stroke();
+	
+}
+
+</script>
+</html>
+--------------main.html-------------
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HTML5</title>
+<script type="text/javascript" src="./scripts/jquery-1.7.2.js"></script>
+<style type="text/css">
+body{
+	margin: 0px auto;
+	background-color: gray;
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+#myCanvas{
+	width:100%;
+	height:100%;
+	-webkit-animation-name: fadeIn; /*动画名称*/
+	-webkit-animation-duration: 1s; /*动画持续时间*/
+	-webkit-animation-iteration-count: 1; /*动画次数*/
+	-webkit-animation-delay: 0s; /*延迟时间*/
+}
+@-webkit-keyframes fadeIn {
+	0% {
+	opacity: 0; /*初始状态 透明度为0*/
+	}
+	50% {
+	opacity: 0; /*中间状态 透明度为0*/
+	}
+	100% {
+	opacity: 1; /*结尾状态 透明度为1*/
+	}
+}
+.font_div {
+	width:100%;
+	top:40%;
+	position:absolute; 
+	vertical-align:middle;
+	text-align:center;
+}
+
+.div1, .div2, .div3, .image_div{
+	display:none;
+}
+
+.div1 {
+	font:70px bold "SimHei";
+	background: -webkit-linear-gradient(left, black, red); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(left, black, red); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(left, black, red); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, black, red); /* 标准的语法（必须放在最后） */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.div2 {
+	font:25px bold "SimHei";
+	color:gray;
+	text-align:center;
+	width:100%;
+}
+
+.div3 {
+	width:100%;
+	height: 190px;
+	background: -webkit-linear-gradient(top, gray, black); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(gray, black); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(gray, black); /* Firefox 3.6 - 15 */
+    background: linear-gradient(gray, black); /* 标准的语法（必须放在最后） */
+    opacity:0.9;
+    position:fixed;
+	bottom:0px;
+	right:0px;
+}
+
+.image_div {
+	margin:0px auto;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:-1;
+	text-align:center;
+	top: -10%;/* 移到-40 left移到40 */
+}
+.bigImages {
+	width:90%;
+	height: 110%;
+}
+
+.hr_left_div2{ width:42%; height:0px; border:#999 1px solid; float:left;}
+.hr_right_div2{ width:41%; height:0px; border:#999 1px solid; float:right;}
+.hr_center_div2{ float:left; height:5px; line-height:5px;}
+
+.hr_top_div3{ 
+	width:100%;
+	height:2px; 
+	background: -webkit-linear-gradient(left, white , red); /* Safari 5.1 - 6.0 */
+  	background: -o-linear-gradient(right, white, red); /* Opera 11.1 - 12.0 */
+  	background: -moz-linear-gradient(right, white, red); /* Firefox 3.6 - 15 */
+  	background: linear-gradient(to right, white , red); /* 标准的语法 */
+}
+.hr_middle_div3 {
+	font: 27px bold "SimHei";
+	color: white;
+	height: 88%;
+}
+.hr_bottom_div3 {
+	width:100%; 
+	height:2px; 
+	background: -webkit-linear-gradient(left, red , white); /* Safari 5.1 - 6.0 */
+  	background: -o-linear-gradient(right, red, white); /* Opera 11.1 - 12.0 */
+  	background: -moz-linear-gradient(right, red, white); /* Firefox 3.6 - 15 */
+  	background: linear-gradient(to right, red , white); /* 标准的语法 */
+}
+
+
+@media screen and (max-width:980px)
+ {
+	 .div2{
+	 	font-size:20px;
+	 }
+	 .div1{
+	 	font-size:40px;
+	 }
+	.hr_middle_div3{
+	 	font-size:20px;
+	}
+	.div3{
+	 	height:160px;
+	 	margin-top: 14%;
+	}
+ }
+ @media screen and (max-width:580px)
+ {
+	 .div2{
+	 	font-size:14px;
+	 }
+	  .div1{
+	 	font-size:30px;
+	 }
+	.hr_middle_div3{
+	 	font-size:14px;
+	 }
+	.div3{
+	 	height:130px;
+	 	margin-top: 24%;
+	 }
+ }
+ @media screen and (max-width:380px)
+ {
+	.div2{
+		font-size:25px;
+		margin-top: 5%;
+	}
+	.div1{
+		font-size:30px;
+	}
+	.hr_left_div2 {
+		width: 30%;
+	}
+	.hr_center_div2 {
+/* 		width: 38%; */
+		height: 5px;
+		line-height: 5px;
+		margin-left: 5px;
+	}
+	.hr_right_div2 {
+		width: 30%;
+	}
+	.hr_middle_div3{
+		font-size:16px;
+	}
+	.div3{
+		height:150px;
+	}
+ }
+</style>
+</head>
+<body>
+	<div class="font_div">
+		<div class="div1">
+			<span>QUICK ACCESS LINK</span>
+		</div>
+		<div class="div2">
+			<div class="hr_left_div2"></div>
+			<div class="hr_center_div2">FEATURE 3</div>
+			<div class="hr_right_div2"></div>
+		</div>
+		<div class="div3">
+			<div style="height:5%;"></div>
+			<div class="hr_top_div3"></div>
+			<div class="hr_middle_div3">
+				<div style="height:20%;"></div>
+				<span>You can access our online resources, categorized as Quick Links and Market Insights,
+quickly and conveniently, saving you valuable time.</span>
+			</div>
+			<div class="hr_bottom_div3"></div>
+		</div>
+	</div>
+	<div class="image_div">
+		<img class="bigImages" src="./images/1.png">
+	</div>
+	
+	<canvas id="myCanvas"></canvas>
+</body>
+<script type="text/javascript">
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+var bodyWidth = document.body.clientWidth;
+var bodyHeight = document.body.clientHeight;
+
+
+$(function(){
+	init();
+});
+
+function init () {
+	
+	//canvasLoad();
+	var x1 = 136;
+	var timer3 = setInterval(function () {
+		
+		x1 += -1;
+		ctx.clearRect(0, 0, bodyWidth, bodyHeight);
+		var my_gradient=ctx.createLinearGradient(0,0,0,170);
+ 		my_gradient.addColorStop(0.4,"rgb(255,255,255)");
+ 		my_gradient.addColorStop(0.6,"rgb(255,255,255)");
+
+		if (x1 >= 0) {
+			my_gradient.addColorStop(0, "rgb("+x1+","+x1+","+x1+")");
+			my_gradient.addColorStop(1, "rgb("+x1+","+x1+","+x1+")");
+		}else{
+			this.clearInterval(timer3);
+			
+			my_gradient.addColorStop(0, "rgb(0,0,0)");
+			my_gradient.addColorStop(1,"rgb(0,0,0)");
+			
+		}
+		//矩形渐变
+		ctx.fillStyle=my_gradient;
+		ctx.globalAlpha=0.9;//透明度
+		ctx.fillRect(0, 0, bodyWidth, bodyHeight);
+		
+	}, 50);
+	
+	//上面标题文字出现
+	$(".div1").show(2000);
+	
+	//下方次要文字出现
+	setTimeout(function () {
+		$(".div2").show(1000);
+	}, 2000);
+	
+	//下方次要文字消失
+	setTimeout(function () {
+		$(".div2").hide(1000);
+	}, 4000);
+	
+	//上面标题文字消失
+	setTimeout(function () {
+		$(".div1").hide(1000);
+	}, 5000);
+	
+	//图片出现
+	setTimeout(function () {
+		$(".image_div").show(2000);
+		$(".div3").show(1000);
+		
+	}, 7000);
+	return;
+	//移动图片
+	setTimeout(function () {
+		moveImage();		
+	}, 10000);
+	
+}
+
+//移动图片
+function moveImage () {
+	var topNum = -10;
+	var rightNum = 0;
+	var imgScale = 1.0;//图片放大倍数
+	
+	//更换为有选项的图片
+	$(".bigImages").attr("src", "./images/2.png");
+	
+	//移动大图片
+	var timer = setInterval(function () {
+		topNum += -2;
+		rightNum += 2;
+		imgScale += 0.05;
+		
+		if(topNum >= -40){
+			$(".image_div").css("top", topNum + "%");
+		}
+		if(imgScale <= 1.15){
+			$(".bigImages").attr("style","-webkit-transform:scale(" + imgScale + "," + imgScale + ");-moz-transform:scale(" + imgScale + "," + imgScale + ");-transform:scale(" + imgScale + "," + imgScale + ");");
+		}
+		if(rightNum <= 20){
+			$(".image_div").css("right", rightNum + "%")
+		}else{
+			this.clearInterval(timer);
+			setTimeout(function () {
+				//清除需点击列
+				var xWidth = 0;
+				var timer5 = setInterval(function () {
+					xWidth += 1;
+					if(xWidth <= 170){
+						ctx.clearRect(62,58,xWidth,10);
+					}else{
+						this.clearInterval(timer5);
+						return;
+						//清除单个需点击的列
+						setTimeout(function(){
+							clearOneRows();
+						}, 2000);
+						return;
+					}
+				}, 10);
+			}, 1000);
+		}
+	}, 200);
+}
+
+//清除单个需要点击的列(Qukly Link)
+function clearOneRows () {
+	ctx.clearRect(0, 0, bodyWidth, bodyHeight);
+	var my_gradient=ctx.createLinearGradient(0,0,0,170);
+	my_gradient.addColorStop(0, "rgb(0,0,0)");
+	my_gradient.addColorStop(0.4,"rgb(255,255,255)");
+	my_gradient.addColorStop(0.6,"rgb(255,255,255)");
+	my_gradient.addColorStop(1,"rgb(0,0,0)");
+	ctx.fillStyle=my_gradient;
+	ctx.globalAlpha=0.8;//透明度
+	ctx.fillRect(0, 0, bodyWidth, bodyHeight);
+	
+	//所有背景改为灰色
+	setTimeout(function () {
+		backgroundToGray();
+		return;
+	}, 1000);
+}
+
+//所有背景改为灰色
+function backgroundToGray () {
+	var x2 = 255;
+	var x3 = 0;
+	var timer4 = setInterval(function () {
+		
+		x2 += -1;
+		x3 += 1;
+		ctx.clearRect(0, 0, bodyWidth, bodyHeight);
+		var my_gradient=ctx.createLinearGradient(0,0,0,170);
+
+		if (x3 <= 136) {
+			my_gradient.addColorStop(0, "rgb("+x3+","+x3+","+x3+")");
+			my_gradient.addColorStop(1, "rgb("+x3+","+x3+","+x3+")");
+		}else{
+			my_gradient.addColorStop(0, "rgb(136,136,136)");
+			my_gradient.addColorStop(1, "rgb(136,136,136)");
+		}
+		
+		if (x2 >= 136) {
+			my_gradient.addColorStop(0.4, "rgb("+x2+","+x2+","+x2+")");
+			my_gradient.addColorStop(0.6, "rgb("+x2+","+x2+","+x2+")");
+		}else{
+			this.clearInterval(timer4);
+			my_gradient.addColorStop(0.4, "rgb(136,136,136)");
+			my_gradient.addColorStop(0.6, "rgb(136,136,136)");
+			
+			//加载最后一张图片
+			lastImageLoad();
+			
+		}
+		//矩形渐变
+		ctx.fillStyle=my_gradient;
+		ctx.globalAlpha=0.7;//透明度
+		ctx.fillRect(0, 0, bodyWidth, bodyHeight);
+		
+	}, 10);
+}
+
+//加载最后一张图片
+function lastImageLoad () {
+	var rightNum = 20;
+	$(".bigImages").attr("src", "./images/3.png").attr("style", "");
+	var timer2 = setInterval(function () {
+		$(".image_div").css("top", "-30%");
+		rightNum += -2;
+		
+		if(rightNum >= 0){
+			$(".image_div").css("right", rightNum + "%");
+		}else{
+			this.clearInterval(timer2);
+			var x = 136;
+			var alpha = 1;
+			var timer6 = setInterval(function () {
+				x += 7;
+				alpha += -0.05;
+				if(x <= 255){
+					ctx.clearRect(15,31,120,10);
+					ctx.clearRect(15,40,270,55);
+					ctx.fillStyle = "rgba("+x+","+x+","+x+","+alpha+")";
+				}else{
+					this.clearInterval(timer6);
+					ctx.clearRect(15,31,120,10);
+					ctx.clearRect(15,40,270,55);
+					//局部由上往下变成灰色
+					setTimeout(function () {
+						var yHeight = 0;
+						var timer7 = setInterval(function () {
+							yHeight += 1;
+							ctx.clearRect(15,31,120,10);
+							ctx.clearRect(15,40,270,55);
+							ctx.fillStyle = "rgb(136,136,136)";
+							ctx.globalAlpha=0.7;//透明度
+							
+							if(yHeight < 10){
+								ctx.fillRect(15,31,120,yHeight);
+								return;
+							}else if(yHeight >= 10 && yHeight <= 55){
+								ctx.fillRect(15,31,120,10);
+								ctx.fillRect(15,40,270,yHeight);
+								return;
+							}else{
+								this.clearInterval(timer7);
+								ctx.fillRect(15,31,120,10);
+								ctx.fillRect(15,40,270,55);
+								setTimeout(function(){
+							 		$("div").hide(2000);
+							 		ctx.clearRect(0, 0, bodyWidth, bodyHeight);
+								}, 2000);
+								return;
+							}
+							
+						}, 30);
+
+				 	}, 3000);
+					return;
+				}
+				ctx.fillRect(15,31,120,10);
+				ctx.fillRect(15,40,270,55);
+			}, 200);
+		 	//div消失
+		}
+		
+	}, 300);
+
+}
+
+</script>
+</html>
+---------position-----------------
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HTML5</title>
+<script type="text/javascript" src="./scripts/jquery-1.7.2.js"></script>
+<style type="text/css">
+body{
+	margin: 0px auto;
+	background-color: gray;
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+#myCanvas{
+	width:100%;
+	height:100%;
+	-webkit-animation-name: fadeIn; /*动画名称*/
+	-webkit-animation-duration: 1s; /*动画持续时间*/
+	-webkit-animation-iteration-count: 1; /*动画次数*/
+	-webkit-animation-delay: 0s; /*延迟时间*/
+}
+@-webkit-keyframes fadeIn {
+	0% {
+	opacity: 0; /*初始状态 透明度为0*/
+	}
+	50% {
+	opacity: 0; /*中间状态 透明度为0*/
+	}
+	100% {
+	opacity: 1; /*结尾状态 透明度为1*/
+	}
+}
+.font_div {
+	width:100%;
+	top:40%;
+	position:absolute; 
+	vertical-align:middle;
+	text-align:center;
+}
+
+.div1, .div2, .div3, .image_div{
+	display:none;
+}
+
+.div1 {
+/* 	font:70px bold "SimHei"; */
+	background: -webkit-linear-gradient(left, black, red); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(left, black, red); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(left, black, red); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, black, red); /* 标准的语法（必须放在最后） */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.div2 {
+	font:25px bold "SimHei";
+	color:gray;
+	text-align:center;
+	width:100%;
+}
+
+.div3 {
+	width:100%;
+	height: 190px;
+	background: -webkit-linear-gradient(top, gray, black); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(gray, black); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(gray, black); /* Firefox 3.6 - 15 */
+    background: linear-gradient(gray, black); /* 标准的语法（必须放在最后） */
+    opacity:0.9;
+    position:fixed;
+	bottom:0px;
+	right:0px;
+}
+
+.image_div {
+	margin:0px auto;
+	width:100%;
+ 	height:100%;
+/*  	height: 762px; */
+	position:absolute;
+	z-index:-1;
+	text-align:center;
+	top: -5%;/* 移到-60 */
+}
+.bigImages {
+	width: 98%;
+ 	height: 110%;
+}
+
+.hr_left_div2{ width:42%; height:0px; border:#999 1px solid; float:left;}
+.hr_right_div2{ width:41%; height:0px; border:#999 1px solid; float:right;}
+.hr_center_div2{ float:left; height:5px; line-height:5px;}
+
+.hr_top_div3{ 
+	width:100%;
+	height:2px; 
+	background: -webkit-linear-gradient(left, white , red); /* Safari 5.1 - 6.0 */
+  	background: -o-linear-gradient(right, white, red); /* Opera 11.1 - 12.0 */
+  	background: -moz-linear-gradient(right, white, red); /* Firefox 3.6 - 15 */
+  	background: linear-gradient(to right, white , red); /* 标准的语法 */
+}
+.hr_middle_div3 {
+/* 	font: 27px bold "SimHei"; */
+	color: white;
+	height: 88%;
+}
+.hr_bottom_div3 {
+	width:100%; 
+	height:2px; 
+	background: -webkit-linear-gradient(left, red , white); /* Safari 5.1 - 6.0 */
+  	background: -o-linear-gradient(right, red, white); /* Opera 11.1 - 12.0 */
+  	background: -moz-linear-gradient(right, red, white); /* Firefox 3.6 - 15 */
+  	background: linear-gradient(to right, red , white); /* 标准的语法 */
+}
+
+
+@media screen and (max-width:980px)
+ {
+	 .div2{
+	 	font-size:20px;
+	 }
+	 .div1{
+	 	font-size:40px;
+	 }
+	.hr_middle_div3{
+	 	font-size:20px;
+	}
+	.div3{
+	 	height:160px;
+	 	margin-top: 14%;
+	}
+ }
+ @media screen and (max-width:580px)
+ {
+	 .div2{
+	 	font-size:14px;
+	 }
+	  .div1{
+	 	font-size:30px;
+	 }
+	.hr_middle_div3{
+	 	font-size:14px;
+	 }
+	.div3{
+	 	height:130px;
+	 	margin-top: 24%;
+	 }
+ }
+ @media screen and (max-width:380px)
+ {
+	.div2{
+		font-size:19px;
+		margin-top: 5%;
+	}
+	.div1{
+		font-size:22px;
+		font-family: -webkit-body;
+	}
+	.hr_left_div2 {
+		width: 30%;
+	}
+	.hr_center_div2 {
+		height: 5px;
+		line-height: 5px;
+		font-family: -webkit-body;
+		text-align: center;
+		width: 39%;
+	}
+	.hr_right_div2 {
+		width: 30%;
+	}
+	.hr_middle_div3{
+		font-size:17px;
+		font-family: -webkit-body;
+		text-align: left;
+	}
+	.div3{
+		height:150px;
+	}
+ }
+</style>
+</head>
+<body>
+	<div class="font_div">
+		<div class="div1">
+			<span>POSITIONS & MOVEMENTS</span>
+		</div>
+		<div class="div2">
+			<div class="hr_left_div2"></div>
+			<div class="hr_center_div2">FEATURE 8</div>
+			<div class="hr_right_div2"></div>
+		</div>
+		<div class="div3">
+			<div style="height:5%;"></div>
+			<div class="hr_top_div3"></div>
+			<div class="hr_middle_div3">
+				<div style="height:30%;"></div>
+				<span id="des0">&nbsp;&nbsp;All the positions and movements of all types of assets are covered in clear reports.</span>
+				<span id="des1" style="display:none;">&nbsp;&nbsp;包括账户列表</span>
+				<span id="des2" style="display:none;">&nbsp;&nbsp;通知书/邀请函</span>
+				<span id="des3" style="display:none;">&nbsp;&nbsp;投资组合摘要</span>
+				<span id="des4" style="display:none;">&nbsp;&nbsp;投资组合列表</span>
+				<span id="des5" style="display:none;">&nbsp;&nbsp;资产配置</span>
+				<span id="des6" style="display:none;">&nbsp;&nbsp;货币账户</span>
+				<span id="des7" style="display:none;">&nbsp;&nbsp;股票</span>
+				<span id="des8" style="display:none;">&nbsp;&nbsp;以及证券动态</span>
+				<span id="des9" style="display:none;">&nbsp;&nbsp;外汇汇率</span>
+				<span id="des10" style="display:none;">&nbsp;&nbsp;电子结单</span>
+			</div>
+			<div class="hr_bottom_div3"></div>
+		</div>
+	</div>
+	<div class="image_div">
+		<img class="bigImages" id="image1" src="./images/position/1.png">
+		<img class="bigImages" id="image2" style="display:none;" src="./images/position/2.png">
+		<img class="bigImages" id="image3" src="./images/position/3.png">
+	</div>
+	
+	<canvas id="myCanvas"></canvas>
+</body>
+<script type="text/javascript">
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+$(function(){
+	init();
+});
+
+function init () {
+	//333/762 111/254
+	//canvasLoad();
+	var x1 = 136;
+	var timer1 = setInterval(function () {
+		
+		x1 += -1;
+		ctx.clearRect(0, 0, c.width, c.height);
+		var my_gradient=ctx.createLinearGradient(0,0,0,170);
+ 		my_gradient.addColorStop(0.4,"rgb(255,255,255)");
+ 		my_gradient.addColorStop(0.6,"rgb(255,255,255)");
+
+		if (x1 >= 0) {
+			my_gradient.addColorStop(0, "rgb("+x1+","+x1+","+x1+")");
+			my_gradient.addColorStop(1, "rgb("+x1+","+x1+","+x1+")");
+		}else{
+			this.clearInterval(timer1);
+			
+			my_gradient.addColorStop(0, "rgb(0,0,0)");
+			my_gradient.addColorStop(1,"rgb(0,0,0)");
+			
+		}
+		//矩形渐变
+		ctx.fillStyle=my_gradient;
+		ctx.globalAlpha=0.9;//透明度
+		ctx.fillRect(0, 0, c.width, c.height);
+		
+	}, 50);
+	
+	//上面标题文字出现
+	$(".div1").show(2000);
+	
+	//下方次要文字出现
+	setTimeout(function () {
+		$(".div2").show(1000);
+	}, 2000);
+	
+	//下方次要文字消失
+	setTimeout(function () {
+		$(".div2").hide(1000);
+	}, 4000);
+	
+	//上面标题文字消失
+	setTimeout(function () {
+		$(".div1").hide(1000);
+	}, 5000);
+	
+	//图片出现
+	setTimeout(function () {
+		$(".image_div").show(2000);
+		$(".div3").show(1000);
+		
+	}, 7000);
+	
+	//移动图片
+	setTimeout(function () {
+		moveImageToTop();		
+	}, 10000);
+	
+}
+
+//向上移动图片
+function moveImageToTop () {
+	var topNum = -10;
+	var rightNum = 0;
+	
+	//移动大图片
+	var timer = setInterval(function () {
+		topNum += -1;
+		
+		if(topNum >= -25){
+			$(".image_div").css("top", topNum + "%");
+		}else{
+			this.clearInterval(timer);
+		}
+	}, 150);
+	//所有背景改为灰色
+	backgroundToGray();
+}
+
+//所有背景改为灰色
+function backgroundToGray () {
+	var x2 = 255;
+	var x3 = 0;
+	var timer2 = setInterval(function () {
+		
+		x2 += -1;
+		x3 += 1;
+		ctx.clearRect(0, 0, c.width, c.height);
+		var my_gradient=ctx.createLinearGradient(0,0,0,170);
+
+		if (x3 <= 136) {
+			my_gradient.addColorStop(0, "rgb("+x3+","+x3+","+x3+")");
+			my_gradient.addColorStop(1, "rgb("+x3+","+x3+","+x3+")");
+		}else{
+			my_gradient.addColorStop(0, "rgb(136,136,136)");
+			my_gradient.addColorStop(1, "rgb(136,136,136)");
+		}
+		
+		if (x2 >= 136) {
+			my_gradient.addColorStop(0.4, "rgb("+x2+","+x2+","+x2+")");
+			my_gradient.addColorStop(0.6, "rgb("+x2+","+x2+","+x2+")");
+		}else{
+			this.clearInterval(timer2);
+			my_gradient.addColorStop(0.4, "rgb(136,136,136)");
+			my_gradient.addColorStop(0.6, "rgb(136,136,136)");
+			
+			//大面积货币账户具体信息灰色改白色
+			bigMoneyGrayToWhite();
+		}
+		//矩形渐变
+		ctx.fillStyle=my_gradient;
+		ctx.globalAlpha=0.7;//透明度
+		ctx.fillRect(0, 0, c.width, c.height);
+		
+	}, 30);
+}
+
+//大面积货币账户具体信息灰色改白色
+function bigMoneyGrayToWhite () {
+	var x = 136;
+	var alpha = 1;
+	var timer3 = setInterval(function () {
+		x += 7;
+		alpha += -0.05;
+		if(x <= 255){
+			ctx.clearRect(5, 43, c.width - 10, 55);
+			ctx.fillStyle = "rgba("+x+","+x+","+x+","+alpha+")";
+		}else{
+			this.clearInterval(timer3);
+			ctx.clearRect(5, 43, c.width - 10, 55);
+			setTimeout(function () {
+				//大面积货币账户具体信息白色缓慢改为灰色
+				WhiteToGrayOnDown();
+				
+				//向下移动图片并切换图片（top 25）
+				moveImageToDown();
+			}, 2000);
+		}
+		ctx.fillRect(5, 43, c.width - 10, 55);
+	}, 200);
+}
+
+//大面积货币账户具体信息白色缓慢改为灰色
+function WhiteToGrayOnDown () {
+	var yHeight = 0;
+	var timer4 = setInterval(function () {
+		yHeight += 1;
+		ctx.clearRect(5, 43, c.width - 10, 55);
+		ctx.fillStyle = "rgb(136,136,136)";
+		ctx.globalAlpha=0.7;//透明度
+		
+		if(yHeight < 55){
+			ctx.fillRect(5, 43, c.width - 10,yHeight);
+		}else{
+			this.clearInterval(timer4);
+			clear();
+		}
+		
+	}, 30);
+}
+
+//向下移动图片并切换图片(top 25)
+function moveImageToDown () {
+	var topNum = -25;
+	var timer5 = setInterval(function () {
+		topNum += 1;
+		
+		if(topNum <= 25){
+			$(".image_div").css("top", topNum + "%");
+		}else{
+			this.clearInterval(timer5);
+			//更换为有选项的图片
+// 			$(".bigImages").attr("src", "./images/position/2.png");
+			$("#image1").hide();
+			$("#image2").show();
+			
+			//清除第一个小面积行
+			setTimeout(function () {
+				clearOneRows();
+			}, 2000);
+			
+		}
+	}, 100);
+}
+
+//清除第一个小面积
+function clearOneRows () {
+	var xWidth = 0;
+	var timer6 = setInterval(function () {
+		xWidth += 1;
+		if (xWidth <= 193) {
+			ctx.clearRect(78, 53, xWidth, 7);
+		} else {
+			this.clearInterval(timer6);
+			$("#des0").hide(1000);
+			$("#des1").show(1000);
+			//遍历清除剩下的单个小面积行
+			eachClearOneRows();
+		}
+	}, 10);
+}
+
+//遍历清除剩下的单个小面积行
+function eachClearOneRows () {
+	var bodyHeight = document.body.clientHeight;
+	var topNum = bodyHeight * 0.25;
+	var endNum = bodyHeight * 0.25;
+	var i = 1;
+	var timer7 = setInterval(function () {
+		
+		//跳过证券动态
+		if (i == 7) {
+			i ++;
+			endNum += -1 * (bodyHeight * 0.048 * 2);
+		} else {
+			endNum += -1 * (bodyHeight * 0.048);
+		}
+		var timer8 = setInterval(function () {
+			topNum += -1;
+			if (topNum >= endNum) {
+				$(".image_div").css("top", topNum + "px");
+			} else {
+				this.clearInterval(timer8);
+				if (i == 8) {
+					var k = i - 1;
+					$("#des" + k).hide();
+				} else {
+					$("#des" + i).hide(1000);
+				}
+				var j = i + 1;
+				$("#des" + j).show(1000);
+				i ++;
+			}
+		}, 50);
+		if (i >= 10) {
+			this.clearInterval(timer7);
+			//回退到证券动态
+			endNum += bodyHeight * 0.048 * 3;
+			var timer9 = setInterval(function () {
+				topNum += 1;
+				if (topNum <= endNum) {
+					$(".image_div").css("top", topNum + "px");
+				} else {
+					this.clearInterval(timer9);
+					$("#des8").show(1000);
+					
+					//加载最后一张图片
+					setTimeout(function () {
+						loadLastImage(bodyHeight);
+					}, 3000);
+				}
+			}, 50);
+		}
+		
+	}, 4000);
+
+}
+
+//加载最后一张图片
+function loadLastImage (bodyHeight) {
+	clear();
+	var topCss = $(".image_div").css("top");
+	var topNum1 = topCss.substring(0, topCss.length - 1);
+	topNum1 = parseFloat(topNum1) / bodyHeight * 100;
+	//var topNum1 = $(".image_div").css("top") / bodyHeight;
+	var timer10 = setInterval(function () {
+		topNum1 += 1;
+		if (topNum1 <= 25) {
+			$(".image_div").css("top", topNum1 + "%");
+		} else {
+			this.clearInterval(timer10);
+			$(".image_div").css("top", "25%");
+// 			$(".bigImages").attr("src", "./images/position/3.png").css("height", "210%");
+			$("#image2").hide();
+			$("#image3").show();
+			
+			setTimeout(function () {
+				//移动最后一张图片至-45%
+				moveLastImage();
+			}, 2000);
+		}
+	}, 100);
+}
+
+//移动最后一张图片至-45%
+function moveLastImage () {
+	var topNum = 25;
+	var timer11 = setInterval(function () {
+		topNum += -1;
+		if (topNum >= -45) {
+			$(".image_div").css("top", topNum + "%");
+		} else {
+			this.clearInterval(timer11);
+		}
+	}, 100);
+}
+
+function clear () {
+	ctx.clearRect(0, 0, c.width, c.height);
+	ctx.fillStyle="rgb(136,136,136)";
+	ctx.globalAlpha=0.7;//透明度
+	ctx.fillRect(0, 0, c.width, c.height);
+}
+
+</script>
+</html>
+---------position1-------------
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HTML5</title>
+<script type="text/javascript" src="./scripts/jquery-1.7.2.js"></script>
+<style type="text/css">
+body{
+	margin: 0px auto;
+	background-color: gray;
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+#myCanvas{
+	width:100%;
+	height:100%;
+	-webkit-animation-name: fadeIn; /*动画名称*/
+	-webkit-animation-duration: 1s; /*动画持续时间*/
+	-webkit-animation-iteration-count: 1; /*动画次数*/
+	-webkit-animation-delay: 0s; /*延迟时间*/
+}
+@-webkit-keyframes fadeIn {
+	0% {
+	opacity: 0; /*初始状态 透明度为0*/
+	}
+	50% {
+	opacity: 0; /*中间状态 透明度为0*/
+	}
+	100% {
+	opacity: 1; /*结尾状态 透明度为1*/
+	}
+}
+.font_div {
+	width:100%;
+	top:40%;
+	position:absolute; 
+	vertical-align:middle;
+	text-align:center;
+}
+
+.div1, .div2, .div3, .image_div{
+	display:none;
+}
+
+.div1 {
+/* 	font:70px bold "SimHei"; */
+	background: -webkit-linear-gradient(left, black, red); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(left, black, red); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(left, black, red); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, black, red); /* 标准的语法（必须放在最后） */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.div2 {
+	font:25px bold "SimHei";
+	color:gray;
+	text-align:center;
+	width:100%;
+}
+
+.div3 {
+	width:100%;
+	height: 190px;
+	background: -webkit-linear-gradient(top, gray, black); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(gray, black); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(gray, black); /* Firefox 3.6 - 15 */
+    background: linear-gradient(gray, black); /* 标准的语法（必须放在最后） */
+    opacity:0.9;
+    position:fixed;
+	bottom:0px;
+	right:0px;
+}
+
+.image_div {
+	margin:0px auto;
+	width:100%;
+ 	height:100%;
+/*  	height: 762px; */
+	position:absolute;
+	z-index:-1;
+	text-align:center;
+	top: -5%;/* 移到-60 */
+}
+.bigImages {
+	width: 98%;
+ 	height: 110%;
+}
+
+.hr_left_div2{ width:42%; height:0px; border:#999 1px solid; float:left;}
+.hr_right_div2{ width:41%; height:0px; border:#999 1px solid; float:right;}
+.hr_center_div2{ float:left; height:5px; line-height:5px;}
+
+.hr_top_div3{ 
+	width:100%;
+	height:2px; 
+	background: -webkit-linear-gradient(left, white , red); /* Safari 5.1 - 6.0 */
+  	background: -o-linear-gradient(right, white, red); /* Opera 11.1 - 12.0 */
+  	background: -moz-linear-gradient(right, white, red); /* Firefox 3.6 - 15 */
+  	background: linear-gradient(to right, white , red); /* 标准的语法 */
+}
+.hr_middle_div3 {
+/* 	font: 27px bold "SimHei"; */
+	color: white;
+	height: 88%;
+}
+.hr_bottom_div3 {
+	width:100%; 
+	height:2px; 
+	background: -webkit-linear-gradient(left, red , white); /* Safari 5.1 - 6.0 */
+  	background: -o-linear-gradient(right, red, white); /* Opera 11.1 - 12.0 */
+  	background: -moz-linear-gradient(right, red, white); /* Firefox 3.6 - 15 */
+  	background: linear-gradient(to right, red , white); /* 标准的语法 */
+}
+
+
+@media screen and (max-width:980px)
+ {
+	 .div2{
+	 	font-size:20px;
+	 }
+	 .div1{
+	 	font-size:40px;
+	 }
+	.hr_middle_div3{
+	 	font-size:20px;
+	}
+	.div3{
+	 	height:160px;
+	 	margin-top: 14%;
+	}
+ }
+ @media screen and (max-width:580px)
+ {
+	 .div2{
+	 	font-size:14px;
+	 }
+	  .div1{
+	 	font-size:30px;
+	 }
+	.hr_middle_div3{
+	 	font-size:14px;
+	 }
+	.div3{
+	 	height:130px;
+	 	margin-top: 24%;
+	 }
+ }
+ @media screen and (max-width:380px)
+ {
+	.div2{
+		font-size:19px;
+		margin-top: 5%;
+	}
+	.div1{
+		font-size:22px;
+		font-family: -webkit-body;
+	}
+	.hr_left_div2 {
+		width: 30%;
+	}
+	.hr_center_div2 {
+		height: 5px;
+		line-height: 5px;
+		font-family: -webkit-body;
+		text-align: center;
+		width: 39%;
+	}
+	.hr_right_div2 {
+		width: 30%;
+	}
+	.hr_middle_div3{
+		font-size:17px;
+		font-family: -webkit-body;
+		text-align: left;
+	}
+	.div3{
+		height:150px;
+	}
+ }
+</style>
+</head>
+<body>
+	<div class="font_div">
+		<div class="div1">
+			<span>POSITIONS & MOVEMENTS</span>
+		</div>
+		<div class="div2">
+			<div class="hr_left_div2"></div>
+			<div class="hr_center_div2">FEATURE 8</div>
+			<div class="hr_right_div2"></div>
+		</div>
+		<div class="div3">
+			<div style="height:5%;"></div>
+			<div class="hr_top_div3"></div>
+			<div class="hr_middle_div3">
+				<div style="height:30%;"></div>
+				<span id="des0">&nbsp;&nbsp;All the positions and movements of all types of assets are covered in clear reports.</span>
+				<span id="des1" style="display:none;">&nbsp;&nbsp;包括账户列表</span>
+				<span id="des2" style="display:none;">&nbsp;&nbsp;通知书/邀请函</span>
+				<span id="des3" style="display:none;">&nbsp;&nbsp;投资组合摘要</span>
+				<span id="des4" style="display:none;">&nbsp;&nbsp;投资组合列表</span>
+				<span id="des5" style="display:none;">&nbsp;&nbsp;资产配置</span>
+				<span id="des6" style="display:none;">&nbsp;&nbsp;货币账户</span>
+				<span id="des7" style="display:none;">&nbsp;&nbsp;股票</span>
+				<span id="des8" style="display:none;">&nbsp;&nbsp;以及证券动态</span>
+				<span id="des9" style="display:none;">&nbsp;&nbsp;外汇汇率</span>
+				<span id="des10" style="display:none;">&nbsp;&nbsp;电子结单</span>
+			</div>
+			<div class="hr_bottom_div3"></div>
+		</div>
+	</div>
+	<div class="image_div">
+		<img class="bigImages" id="image1" src="./images/position/1.png">
+		<img class="bigImages" id="image2" style="display:none;" src="./images/position/2.png">
+		<img class="bigImages" id="image3" src="./images/position/3.png">
+	</div>
+	
+	<canvas id="myCanvas"></canvas>
+</body>
+<script type="text/javascript">
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+$(function(){
+	init();
+});
+
+function init () {
+	//333/762 111/254
+	//canvasLoad();
+	var x1 = 136;
+	var timer1 = setInterval(function () {
+		
+		x1 += -1;
+		ctx.clearRect(0, 0, c.width, c.height);
+		var my_gradient=ctx.createLinearGradient(0,0,0,170);
+ 		my_gradient.addColorStop(0.4,"rgb(255,255,255)");
+ 		my_gradient.addColorStop(0.6,"rgb(255,255,255)");
+
+		if (x1 >= 0) {
+			my_gradient.addColorStop(0, "rgb("+x1+","+x1+","+x1+")");
+			my_gradient.addColorStop(1, "rgb("+x1+","+x1+","+x1+")");
+		}else{
+			this.clearInterval(timer1);
+			
+			my_gradient.addColorStop(0, "rgb(0,0,0)");
+			my_gradient.addColorStop(1,"rgb(0,0,0)");
+			
+		}
+		//矩形渐变
+		ctx.fillStyle=my_gradient;
+		ctx.globalAlpha=0.9;//透明度
+		ctx.fillRect(0, 0, c.width, c.height);
+		
+	}, 50);
+	
+	//上面标题文字出现
+	$(".div1").show(2000);
+	
+	//下方次要文字出现
+	setTimeout(function () {
+		$(".div2").show(1000);
+	}, 2000);
+	
+	//下方次要文字消失
+	setTimeout(function () {
+		$(".div2").hide(1000);
+	}, 4000);
+	
+	//上面标题文字消失
+	setTimeout(function () {
+		$(".div1").hide(1000);
+	}, 5000);
+	
+	//图片出现
+	setTimeout(function () {
+		$(".image_div").show(2000);
+		$(".div3").show(1000);
+		
+	}, 7000);
+	
+	//移动图片
+	setTimeout(function () {
+		moveImageToTop();		
+	}, 10000);
+	
+}
+
+//向上移动图片
+function moveImageToTop () {
+	var topNum = -10;
+	var rightNum = 0;
+	
+	//移动大图片
+	var timer = setInterval(function () {
+		topNum += -1;
+		
+		if(topNum >= -25){
+			$(".image_div").css("top", topNum + "%");
+		}else{
+			this.clearInterval(timer);
+		}
+	}, 150);
+	//所有背景改为灰色
+	backgroundToGray();
+}
+
+//所有背景改为灰色
+function backgroundToGray () {
+	var x2 = 255;
+	var x3 = 0;
+	var timer2 = setInterval(function () {
+		
+		x2 += -1;
+		x3 += 1;
+		ctx.clearRect(0, 0, c.width, c.height);
+		var my_gradient=ctx.createLinearGradient(0,0,0,170);
+
+		if (x3 <= 136) {
+			my_gradient.addColorStop(0, "rgb("+x3+","+x3+","+x3+")");
+			my_gradient.addColorStop(1, "rgb("+x3+","+x3+","+x3+")");
+		}else{
+			my_gradient.addColorStop(0, "rgb(136,136,136)");
+			my_gradient.addColorStop(1, "rgb(136,136,136)");
+		}
+		
+		if (x2 >= 136) {
+			my_gradient.addColorStop(0.4, "rgb("+x2+","+x2+","+x2+")");
+			my_gradient.addColorStop(0.6, "rgb("+x2+","+x2+","+x2+")");
+		}else{
+			this.clearInterval(timer2);
+			my_gradient.addColorStop(0.4, "rgb(136,136,136)");
+			my_gradient.addColorStop(0.6, "rgb(136,136,136)");
+			
+			//大面积货币账户具体信息灰色改白色
+			bigMoneyGrayToWhite();
+		}
+		//矩形渐变
+		ctx.fillStyle=my_gradient;
+		ctx.globalAlpha=0.7;//透明度
+		ctx.fillRect(0, 0, c.width, c.height);
+		
+	}, 30);
+}
+
+//大面积货币账户具体信息灰色改白色
+function bigMoneyGrayToWhite () {
+	var x = 136;
+	var alpha = 1;
+	var timer3 = setInterval(function () {
+		x += 7;
+		alpha += -0.05;
+		if(x <= 255){
+			ctx.clearRect(5, 43, c.width - 10, 55);
+			ctx.fillStyle = "rgba("+x+","+x+","+x+","+alpha+")";
+		}else{
+			this.clearInterval(timer3);
+			ctx.clearRect(5, 43, c.width - 10, 55);
+			setTimeout(function () {
+				//大面积货币账户具体信息白色缓慢改为灰色
+				WhiteToGrayOnDown();
+				
+				//向下移动图片并切换图片（top 25）
+				moveImageToDown();
+			}, 2000);
+		}
+		ctx.fillRect(5, 43, c.width - 10, 55);
+	}, 200);
+}
+
+//大面积货币账户具体信息白色缓慢改为灰色
+function WhiteToGrayOnDown () {
+	var yHeight = 0;
+	var timer4 = setInterval(function () {
+		yHeight += 1;
+		ctx.clearRect(5, 43, c.width - 10, 55);
+		ctx.fillStyle = "rgb(136,136,136)";
+		ctx.globalAlpha=0.7;//透明度
+		
+		if(yHeight < 55){
+			ctx.fillRect(5, 43, c.width - 10,yHeight);
+		}else{
+			this.clearInterval(timer4);
+			clear();
+		}
+		
+	}, 30);
+}
+
+//向下移动图片并切换图片(top 25)
+function moveImageToDown () {
+	var topNum = -25;
+	var timer5 = setInterval(function () {
+		topNum += 1;
+		
+		if(topNum <= 25){
+			$(".image_div").css("top", topNum + "%");
+		}else{
+			this.clearInterval(timer5);
+			//更换为有选项的图片
+// 			$(".bigImages").attr("src", "./images/position/2.png");
+			$("#image1").hide();
+			$("#image2").show();
+			
+			//清除第一个小面积行
+			setTimeout(function () {
+				clearOneRows();
+			}, 2000);
+			
+		}
+	}, 100);
+}
+
+//清除第一个小面积
+function clearOneRows () {
+	var xWidth = 0;
+	var timer6 = setInterval(function () {
+		xWidth += 1;
+		if (xWidth <= 193) {
+			ctx.clearRect(78, 53, xWidth, 7);
+		} else {
+			this.clearInterval(timer6);
+			$("#des0").hide(1000);
+			$("#des1").show(1000);
+			//遍历清除剩下的单个小面积行
+			eachClearOneRows();
+		}
+	}, 10);
+}
+
+//遍历清除剩下的单个小面积行
+function eachClearOneRows () {
+	var bodyHeight = document.body.clientHeight;
+	var topNum = bodyHeight * 0.25;
+	var endNum = bodyHeight * 0.25;
+	var i = 1;
+	var timer7 = setInterval(function () {
+		
+		//跳过证券动态
+		if (i == 7) {
+			i ++;
+			endNum += -1 * (bodyHeight * 0.048 * 2);
+		} else {
+			endNum += -1 * (bodyHeight * 0.048);
+		}
+		var timer8 = setInterval(function () {
+			topNum += -1;
+			if (topNum >= endNum) {
+				$(".image_div").css("top", topNum + "px");
+			} else {
+				this.clearInterval(timer8);
+				if (i == 8) {
+					var k = i - 1;
+					$("#des" + k).hide();
+				} else {
+					$("#des" + i).hide(1000);
+				}
+				var j = i + 1;
+				$("#des" + j).show(1000);
+				i ++;
+			}
+		}, 50);
+		if (i >= 10) {
+			this.clearInterval(timer7);
+			//回退到证券动态
+			endNum += bodyHeight * 0.048 * 3;
+			var timer9 = setInterval(function () {
+				topNum += 1;
+				if (topNum <= endNum) {
+					$(".image_div").css("top", topNum + "px");
+				} else {
+					this.clearInterval(timer9);
+					$("#des8").show(1000);
+					
+					//加载最后一张图片
+					setTimeout(function () {
+						loadLastImage(bodyHeight);
+					}, 3000);
+				}
+			}, 50);
+		}
+		
+	}, 4000);
+
+}
+
+//加载最后一张图片
+function loadLastImage (bodyHeight) {
+	clear();
+	var topCss = $(".image_div").css("top");
+	var topNum1 = topCss.substring(0, topCss.length - 1);
+	topNum1 = parseFloat(topNum1) / bodyHeight * 100;
+	//var topNum1 = $(".image_div").css("top") / bodyHeight;
+	var timer10 = setInterval(function () {
+		topNum1 += 1;
+		if (topNum1 <= 25) {
+			$(".image_div").css("top", topNum1 + "%");
+		} else {
+			this.clearInterval(timer10);
+			$(".image_div").css("top", "25%");
+// 			$(".bigImages").attr("src", "./images/position/3.png").css("height", "210%");
+			$("#image2").hide();
+			$("#image3").show();
+			
+			setTimeout(function () {
+				//移动最后一张图片至-45%
+				moveLastImage();
+			}, 2000);
+		}
+	}, 100);
+}
+
+//移动最后一张图片至-45%
+function moveLastImage () {
+	var topNum = 25;
+	var timer11 = setInterval(function () {
+		topNum += -1;
+		if (topNum >= -45) {
+			$(".image_div").css("top", topNum + "%");
+		} else {
+			this.clearInterval(timer11);
+		}
+	}, 100);
+}
+
+function clear () {
+	ctx.clearRect(0, 0, c.width, c.height);
+	ctx.fillStyle="rgb(136,136,136)";
+	ctx.globalAlpha=0.7;//透明度
+	ctx.fillRect(0, 0, c.width, c.height);
+}
+
+</script>
+</html>
